@@ -22,6 +22,12 @@ while not q.empty() :
         if "http" in str :
              q.put(str)
              print(str)
+        elif str.find("/") != 0 :
+             locationOfDotCom = entry.find(".com")
+             newEntry = entry[0 : locationOfDotCom + 4]
+             str2 = newEntry + "/" +  str
+             q.put(str2)
+             print(str2)
         else :
              locationOfDotCom = entry.find(".com")
              newEntry = entry[0 : locationOfDotCom + 4]
